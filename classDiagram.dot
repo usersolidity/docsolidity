@@ -1,0 +1,10 @@
+
+digraph UmlClassDiagram {
+rankdir=BT
+color=black
+arrowhead=open
+node [shape=record, style=filled, fillcolor=gray95]
+0 [label="{BlindAuction| Public:\l\ \ \ beneficiary: address\l\ \ \ biddingEnd: uint\l\ \ \ revealEnd: uint\l\ \ \ ended: bool\l\ \ \ bids: mapping\(address=\>Bid[]\)\l\ \ \ highestBidder: address\l\ \ \ highestBid: uint\l\ \ \ pendingReturns: mapping\(address=\>uint\)\l| Internal:\l\ \ \ \ placeBid(bidder: address, value: uint): (success: bool)\lPublic:\l\ \ \ \ \<\<payable\>\> bid(_blindedBid: bytes32)\l\ \ \ \ \<\<event\>\> AuctionEnded(winner: address, highestBid: uint)\l\ \ \ \ \<\<modifier\>\> onlyBefore(_time: uint)\l\ \ \ \ \<\<modifier\>\> onlyAfter(_time: uint)\l\ \ \ \ constructor(_biddingTime: uint, _revealTime: uint, _beneficiary: address)\l\ \ \ \ reveal(_values: uint[], _fake: bool[], _secret: bytes32[])\l\ \ \ \ withdraw()\l\ \ \ \ auctionEnd()\l}"]
+"0struct0" [label="{\<\<struct\>\>\nBid|blindedBid: bytes32\ldeposit: uint\l}"]
+"0struct0" -> 0 [arrowhead=diamond, weight=3]
+}

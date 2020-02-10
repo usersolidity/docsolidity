@@ -1,7 +1,7 @@
 pragma solidity >0.4.23 <0.7.0;
 
     contract BlindAuction {
-        struct Bid {€
+        struct Bid {
             bytes32 blindedBid;
             uint deposit;
     }
@@ -141,4 +141,3 @@ pragma solidity >0.4.23 <0.7.0;
         highestBidder = bidder;
         return true;
     }
-}

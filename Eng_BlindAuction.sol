@@ -1,13 +1,13 @@
 pragma solidity >0.4.23 <0.7.0;
 
-contract BlindAuction {
-    struct Bid {
-        bytes32 blindedBid;
-        uint deposit;
+    contract BlindAuction {
+        struct Bid {€
+            bytes32 blindedBid;
+            uint deposit;
     }
 
     address payable public beneficiary;
-    uint public biddingEnd;
+    uint public biddingEnd;å
     uint public revealEnd;
     bool public ended;
 
